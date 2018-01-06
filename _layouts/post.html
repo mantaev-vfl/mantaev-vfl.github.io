@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+
+	<header class="w3-display-container w3-wide">
+		<img src="{{ page.coverImage }}" alt="background image" class="w3-image w3-opacity" width="1250px" style="max-height:400px;">
+		<div class="w3-display-middle w3-padding">
+			<!--<img src="{{ page.displayPicture }}" class="w3-image w3-white w3-card-4 w3-round-large" width="15%" height="13%" style="padding:5px;">
+			<br>
+			<br>-->
+			<div class="w3-padding w3-tag w3-black w3-wide">
+				<h4 class="w3-text-white w3-text-large"><b>{{ page.title }}</b></h4>
+				<img src="/assets/icon.png" class="w3-image" width="30px" height="30px">
+				<span class="w3-small w3-text-light-grey" itemprop="datePublished">{{ page.date }}</span>
+			</div>
+		</div>
+	</header>
+	
+	<article class="w3-container" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="w3-text-grey w3-medium w3-padding" itemprop="articleBody">
+			{{ content }}
+		</div>
+	</article>
+
+	<footer class="w3-topbar w3-border-black">
+  		{% if site.disqus.shortname %}
+    		{% include disqus_comments.html %}
+  		{% endif %}
+	</footer>
