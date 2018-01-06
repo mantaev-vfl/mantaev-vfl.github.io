@@ -3,54 +3,39 @@
   <div class="wrapper">
 
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-      	<!--<div class="w3-right w3-red w3-text-white w3-tag">{{ site.author | escape }}</div>-->
-        <ul class="contact-list" style="list-style-type:none">
-            {% if site.email %}
-            <li><a class="w3-red w3-card w3-ul w3-padding w3-text-white" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
-      </div>
       
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list w3-ul">
+        
+          {% if site.email %}
+          <li>
+            <img class="w3-image w3-white w3-card" src="/assets/dropbox.png" alt="dropbox" style="width:3%;height:3%"><a class="w3-red w3-card w3-ul w3-padding w3-text-white w3-small" href="mailto:{{ site.email }}" style="text-decoration:none">{{ site.email }}</a>
+          </li>
+          {% endif %}
+          
           {% if site.instagram_username %}
           <li>
-          	<a href="https://www.instagram.com/amantaeev/" target="_blank"><img class="w3-image w3-white w3-card" src="/assets/instagramIcon.png" alt="instagram" style="width:3%;height:3%"></a> <span class="w3-padding w3-red w3-text-white w3-card">{{ site.instagram_username }}
+          	<a href="https://www.instagram.com/amantaeev/" target="_blank" style="text-decoration:none"><img class="w3-image w3-white w3-card" src="/assets/instagramIcon.png" alt="instagram" style="width:3%;height:3%"><span class="w3-padding w3-red w3-text-white w3-card w3-small">{{ site.instagram_username }}</span></a>
           </li>
           {% endif %}
           
           {% if site.snapchat_username %}
           <li>
-          	<img class="w3-image w3-white w3-card" src="/assets/snapchatIcon.png" alt="snapchat" style="width:3%;height:3%"> <span class="w3-padding w3-red w3-text-white w3-card">{{ site.snapchat_username }}
+          	<img class="w3-image w3-white w3-card" src="/assets/snapchatIcon.png" alt="snapchat" style="width:3%;height:3%"><span class="w3-padding w3-red w3-text-white w3-card w3-small">{{ site.snapchat_username }}</span>
           </li>
           {% endif %}
           
           {% if site.facebook_username %}
           <li>
-          	<a href="https://www.facebook.com/ali.mantaev" target="_blank"><img class="w3-image w3-white w3-card" src="/assets/facebookIcon.png" alt="facebook" style="width:3%;height:3%"></a> <span class="w3-padding w3-red w3-text-white w3-card">{{ site.facebook_username }}
+          	<a href="https://www.facebook.com/ali.mantaev" target="_blank" style="text-decoration:none"><img class="w3-image w3-white w3-card" src="/assets/facebookIcon.png" alt="facebook" style="width:3%;height:3%"><span class="w3-padding w3-red w3-text-white w3-card w3-small">{{ site.facebook_username }}</a>
           </li>
           {% endif %}
           
-          
-          <!--{% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}-->
         </ul>
       </div>
 		
-	<div class="w3-tag w3-right w3-white w3-text-black">&#169; {{ site.published }}</div>
+	<!--div class="w3-right w3-white w3-text-black">&#169; {{ site.published }}</div>-->
   </div>
 
 </footer>
